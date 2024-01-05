@@ -1,10 +1,13 @@
+import Logo from "/assets/logo.webp";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
-  )
-}
+    <section>
+        <div>
+          <h1>Header</h1>
+        </div>
+    </section>
+  );
+};
 
-export default Header
+export default Header;
