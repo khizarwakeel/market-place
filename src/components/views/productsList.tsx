@@ -4,7 +4,7 @@ import ProductImg from "/public/assets/feature.webp";
 
 const ProductsList = () => {
   return (
-    <section>
+    <section className="pt-20">
       <Wrapper>
         <div className="text-center">
           <h3 className="text-[#0062f5]">PRODUCTS</h3>
