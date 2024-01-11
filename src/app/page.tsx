@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <Herosection />
       <Promotion />
-      {/* <ProductsList /> */}
+      <ProductsList />
     </main>
   );
 }
