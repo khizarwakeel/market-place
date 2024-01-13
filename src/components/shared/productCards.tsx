@@ -13,7 +13,7 @@ const ProductCards: React.FC<IProps> = ({ img, title, price }) => {
         <Image
           src={img}
           alt="Products"
-          className="hover:scale-105 duration-300 object-cover"
+          className="hover:scale-105 duration-300 object-cover flex-shrink-0"
         />
         <h3 className="py-2 font-bold">{title}</h3>
         <p className="text-gray-500">${price}</p>
