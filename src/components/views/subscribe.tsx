@@ -16,7 +16,7 @@ const Subscribe = () => {
           <div className="flex gap-3">
             <div>
               <Input
-                className="w-80 border-gray-500 rounded-none"
+                className="w-80 border-gray-500 rounded-none focus:outline-none"
                 placeholder="Input Email Address"
               />
             </div>
@@ -26,9 +26,9 @@ const Subscribe = () => {
               </Button>
             </div>
           </div>
-            </div>
+        </div>
         <div className="absolute top-0 bottom-0 flex items-center justify-center -z-10 left-0 right-0">
-            <h4 className="text-9xl text-gray-100">Newsletter</h4>
+          <h4 className="text-9xl text-gray-100">Newsletter</h4>
         </div>
       </Wrapper>
     </section>
