@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
 import ProductImg1 from "/public/assets/girl1.png";
 import ProductImg2 from "/public/assets/girl2.png";
-import ProductImg3 from "/public/assets/boy1.webp";
-import ProductImg4 from "/public/assets/boy2.webp";
+import ProductImg3 from "/public/assets/boy1.png";
+import ProductImg4 from "/public/assets/boy2.png";
 import ProductImg5 from "/public/assets/kids1.jpg";
 import ProductImg6 from "/public/assets/kids2.webp";
 
