@@ -9,22 +9,24 @@ const Header = () => {
     <section className="bg-slate-100 py-4">
       <Wrapper>
         <div className="flex justify-between items-center h-full">
-          <div>
-            <Image src={Logo} alt="O Dine Market" />
-          </div>
+          <Link href={"/"}>
+            <div>
+              <Image src={Logo} alt="O Dine Market" />
+            </div>
+          </Link>
           <div>
             <ul className="flex gap-10 font-semibold">
               <li>
-                <Link href={""}>Female</Link>
+                <Link href={"/Female"}>Female</Link>
               </li>
               <li>
-                <Link href={""}>Male</Link>
+                <Link href={"/Male"}>Male</Link>
               </li>
               <li>
-                <Link href={""}>Kids</Link>
+                <Link href={"/Kids"}>Kids</Link>
               </li>
               <li>
-                <Link href={""}>All Products</Link>
+                <Link href={"/All-Products"}>All Products</Link>
               </li>
             </ul>
           </div>
