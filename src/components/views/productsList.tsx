@@ -1,7 +1,8 @@
 import { StaticImageData } from "next/image";
 import Wrapper from "../shared/wrapper";
 import { products } from "../utils/data";
-import ProductsCom from "../shared/productCards";
+import Link from "next/link";
+import ProductsCards from "../shared/productCards";
 
 const ProductsList = () => {
   return (
@@ -13,13 +14,15 @@ const ProductsList = () => {
         </div>
         <div className="grid grid-cols-4 gap-5">
           {products.slice(0, 4).map((item, index) => (
-            <div key={index}>
-              <ProductsCom
-                img={item.image as StaticImageData}
-                title={item.name}
-                price={item.price}
-              />
-            </div>
+            <Link href={""} key={index}>
+              <div>
+                <ProductsCards
+                  img={item.image as StaticImageData}
+                  title={item.name}
+                  price={item.price}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </Wrapper>

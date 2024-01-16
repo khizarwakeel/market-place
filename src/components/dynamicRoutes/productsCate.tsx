@@ -28,17 +28,23 @@ const ProductsCate: NextPage<ProductsCateProps> = ({ category }) => {
         <div className="text-center text-4xl font-bold my-10">
           <h1>{category === "All-Products" ? categoryDisplay : category}</h1>
         </div>
-        <div className="grid grid-cols-4 gap-5">
-          {filteredCategory.map((item, index) => (
-            <div key={index}>
-              <ProductsCards
-                img={item.image as StaticImageData}
-                title={item.name}
-                price={item.price}
-              />
-            </div>
-          ))}
-        </div>
+        {filteredCategory.length > 0 ? (
+          <div className="grid grid-cols-4 gap-5">
+            {filteredCategory.map((item, index) => (
+              <div key={index}>
+                <ProductsCards
+                  img={item.image as StaticImageData}
+                  title={item.name}
+                  price={item.price}
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-lg text-center my-10">
+            <p>Sorry! Products not Available</p>
+          </div>
+        )}
       </Wrapper>
     </section>
   );

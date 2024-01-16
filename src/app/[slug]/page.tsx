@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import ProductsCate from "@/components/views/productsCate";
+import ProductsCate from "@/components/dynamicRoutes/productsCate";
 
 interface ParamsVal {
   slug: string;
