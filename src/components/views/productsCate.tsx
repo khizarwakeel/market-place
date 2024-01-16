@@ -19,6 +19,7 @@ const ProductsCate: NextPage<ProductsCateProps> = ({ category }) => {
 
   if (category === "All-Products") {
     categoryDisplay = category.split("-").join(" ");
+    // categoryDisplay = category.replace(/-/g, ' ');
   }
 
   return (
