@@ -36,6 +36,8 @@ const ProductsCate: NextPage<ProductsCateProps> = ({ category }) => {
                   img={item.image as StaticImageData}
                   title={item.name}
                   price={item.price}
+                  id={item.id}
+                  category={item.category}
                 />
               </div>
             ))}
