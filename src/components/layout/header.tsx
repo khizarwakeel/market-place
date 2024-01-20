@@ -80,7 +80,7 @@ const Header = () => {
             <div className="bg-gray-200 h-12 w-12 rounded-full flex justify-center items-center">
               <ShoppingCart />
             </div>
-            <div className="bg-red-600 text-white text-sm absolute -top-1.5 right-1 h-5 w-5 text-center rounded-full ">
+            <div className="bg-red-600 text-white text-sm absolute -top-1.5 right-1 h-5 w-5 flex justify-center pl-[1.2px] items-center rounded-[40px]">
               {0}
             </div>
           </div>
