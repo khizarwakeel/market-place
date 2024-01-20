@@ -1,10 +1,13 @@
+"use client";
 import Logo from "/public/assets/Logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart, Search } from "lucide-react";
 import Wrapper from "../shared/wrapper";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const parthName = usePathname();
   return (
     <section className="bg-slate-100 py-4">
       <Wrapper>
@@ -17,19 +20,46 @@ const Header = () => {
           <div>
             <ul className="flex gap-10 font-semibold">
               <li>
-                <Link href={"/Female"}>Female</Link>
+                <Link
+                  href={"/Female"}
+                  className={`${parthName === "/Female" ? "text-red-600" : ""}`}
+                >
+                  Female
+                </Link>
               </li>
               <li>
-                <Link href={"/Male"}>Male</Link>
+                <Link
+                  href={"/Male"}
+                  className={`${parthName === "/Male" ? "text-red-600" : ""}`}
+                >
+                  Male
+                </Link>
               </li>
               <li>
-                <Link href={"/Kids"}>Kids</Link>
+                <Link
+                  href={"/Kids"}
+                  className={`${parthName === "/Kids" ? "text-red-600" : ""}`}
+                >
+                  Kids
+                </Link>
               </li>
               <li>
-                <Link href={"/Suits"}>Suits</Link>
+                <Link
+                  href={"/Suits"}
+                  className={`${parthName === "/Suits" ? "text-red-600" : ""}`}
+                >
+                  Suits
+                </Link>
               </li>
               <li>
-                <Link href={"/All-Products"}>All Products</Link>
+                <Link
+                  href={"/All-Products"}
+                  className={`${
+                    parthName === "/All-Products" ? "text-red-600" : ""
+                  }`}
+                >
+                  All Products
+                </Link>
               </li>
             </ul>
           </div>
