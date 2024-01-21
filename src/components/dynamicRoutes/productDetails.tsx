@@ -13,7 +13,9 @@ interface ProductDetailsProp {
 const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
   const sizes = ["XL", "S", "M", "L", "XL"];
 
-  const productDetail = products.filter((item) => item.id == uniqueVal);
+  const productDetail = products.filter(
+    (item) => item.id === Number(uniqueVal)
+  );
   const [{ image, name, price, category }] = productDetail;
 
   let [count, setCount] = useState(0);
