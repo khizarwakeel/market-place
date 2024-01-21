@@ -71,7 +71,7 @@ const Herosection = () => {
               />
             </div>
           </div>
-          <div className="bg-[#ffece3] rounded-full h-[35rem] relative w-[36rem] mx-auto">
+          <div className="bg-[#ffece3] h-[35rem] relative w-[35rem] mx-auto rounded-full">
             <div className="absolute -top-10">
               <div className="ml-10">
                 <Image
