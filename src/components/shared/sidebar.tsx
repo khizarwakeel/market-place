@@ -86,9 +86,9 @@ const Sidebar: NextPage<ISidebarProps> = ({ open, setOpen }) => {
                         </div>
                       </div>
                       <div className="mt-10">
-                        <div className="mb-6">
-                          <div className="flex items-center justify-center gap-1 relative">
-                            <div className="absolute left-1 md:left-[85px]">
+                        <div className="mb-6 flex justify-center">
+                          <div className="flex items-center gap-1 relative">
+                            <div className="absolute left-1">
                               <Search className="h-5 w-5 text-gray-400" />
                             </div>
                             <div>
