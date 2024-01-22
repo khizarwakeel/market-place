@@ -13,7 +13,7 @@ const Header = () => {
   const parthName = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <section className="bg-slate-100 py-4">
+    <section className="bg-slate-100 py-7">
       <Wrapper>
         <div className="flex justify-between items-center h-full">
           <Link href={"/"}>

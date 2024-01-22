@@ -25,7 +25,7 @@ const ProductsCate: NextPage<ProductsCateProps> = ({ category }) => {
   return (
     <section>
       <Wrapper>
-        <div className="text-center md:text-4xl text-2xl font-bold md:my-10 my-5">
+        <div className="text-center md:text-4xl text-2xl font-bold md:my-10 my-6">
           <h1>{category === "All-Products" ? categoryDisplay : category}</h1>
         </div>
         {filteredCategory.length > 0 ? (

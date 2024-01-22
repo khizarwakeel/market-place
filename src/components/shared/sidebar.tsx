@@ -4,6 +4,9 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { NextPage } from "next";
 import Image from "next/image";
 import Logo from "/public/assets/Logo.webp";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Search } from "lucide-react";
 
 interface ISidebarProps {
   open: boolean;
@@ -11,6 +14,29 @@ interface ISidebarProps {
 }
 
 const Sidebar: NextPage<ISidebarProps> = ({ open, setOpen }) => {
+  const navigation = [
+    {
+      name: "Female",
+      path: "/Female",
+    },
+    {
+      name: "Male",
+      path: "/Male",
+    },
+    {
+      name: "Kids",
+      path: "/Kids",
+    },
+    {
+      name: "Suits",
+      path: "/Suits",
+    },
+    {
+      name: "All Products",
+      path: "/AllProducts",
+    },
+  ];
+  const parthName = usePathname();
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -40,21 +66,59 @@ const Sidebar: NextPage<ISidebarProps> = ({ open, setOpen }) => {
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
                   <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                    <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                      <div className="flex items-start justify-between">
+                    <div className="flex-1 overflow-y-auto px-6 py-7">
+                      <div className="flex items-center justify-between">
                         <Dialog.Title className="text-lg font-medium text-gray-900">
-                          <Image src={Logo} alt="Dien Market" />
+                          <Link href={"/"} onClick={() => setOpen(false)}>
+                            <Image src={Logo} alt="Dien Market" />
+                          </Link>
                         </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
                           <button
                             type="button"
-                            className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
+                            className="relative -m-2 p-6"
                             onClick={() => setOpen(false)}
                           >
                             <span className="absolute -inset-0.5" />
                             <span className="sr-only">Close panel</span>
                             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                           </button>
+                        </div>
+                      </div>
+                      <div className="mt-10">
+                        <div className="mb-6">
+                          <div className="flex items-center justify-center gap-1 relative">
+                            <div className="absolute left-1 md:left-[85px]">
+                              <Search className="h-5 w-5 text-gray-400" />
+                            </div>
+                            <div>
+                              <input
+                                type="search"
+                                name="Search"
+                                placeholder="What you looking for"
+                                className="border outline-none pl-7 w-60 h-7 border-gray-300 rounded-md"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <ul className="font-semibold">
+                            {navigation.map((items, index) => (
+                              <li key={index} className="mb-5">
+                                <Link
+                                  onClick={() => setOpen(false)}
+                                  href={items.name}
+                                  className={`${
+                                    parthName === items.path
+                                      ? "text-red-600"
+                                      : ""
+                                  }`}
+                                >
+                                  {items.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     </div>
