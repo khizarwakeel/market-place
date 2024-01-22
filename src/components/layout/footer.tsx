@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <section>
       <Wrapper>
-        <div className="grid grid-cols-4 gap-28 py-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-28 gap-12 py-10">
           <div>
             <div>
               <Image src={Logo} alt="O dine Logo" />
@@ -73,7 +73,7 @@ const Footer = () => {
       </Wrapper>
       <div className="border-t border-black">
         <Wrapper>
-          <div className="text-lg flex justify-between py-10">
+          <div className="lg:text-lg text-sm md:flex-row flex-col gap-6 md:gap-0 flex justify-between items-center py-10">
             <p>Copyright © 2024 Dine Market</p>
             <p>
               Design by. <span className="font-bold">Weird Design Studio</span>

@@ -5,9 +5,13 @@ import Link from "next/link";
 import { ShoppingCart, Search } from "lucide-react";
 import Wrapper from "../shared/wrapper";
 import { usePathname } from "next/navigation";
+import Sidebar from "../shared/sidebar";
+import { useState } from "react";
+import { AlignRight } from "lucide-react";
 
 const Header = () => {
   const parthName = usePathname();
+  const [open, setOpen] = useState(false);
   return (
     <section className="bg-slate-100 py-4">
       <Wrapper>
@@ -17,7 +21,7 @@ const Header = () => {
               <Image src={Logo} alt="O Dine Market" />
             </div>
           </Link>
-          <div>
+          <div className="lg:block hidden">
             <ul className="flex gap-10 font-semibold">
               <li>
                 <Link
@@ -64,10 +68,10 @@ const Header = () => {
             </ul>
           </div>
           <div className="flex items-center gap-1 relative">
-            <div className="absolute left-1">
+            <div className="absolute left-1 lg:block hidden">
               <Search className="h-5 w-5 text-gray-400" />
             </div>
-            <div>
+            <div className="lg:block hidden">
               <input
                 type="search"
                 name="Search"
@@ -76,13 +80,19 @@ const Header = () => {
               />
             </div>
           </div>
-          <div className="relative">
+          <div className="relative lg:block hidden">
             <div className="bg-gray-200 h-12 w-12 rounded-full flex justify-center items-center">
               <ShoppingCart />
             </div>
             <div className="bg-red-600 text-white text-sm absolute -top-1.5 right-1 h-5 w-5 flex justify-center items-center rounded-[40px]">
               {0}
             </div>
+          </div>
+          <div className="lg:hidden block">
+            <Sidebar open={open} setOpen={setOpen} />
+            <button onClick={() => setOpen(true)}>
+              <AlignRight />
+            </button>
           </div>
         </div>
       </Wrapper>

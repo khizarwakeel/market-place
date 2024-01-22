@@ -5,18 +5,18 @@ import Image from "next/image";
 
 const Herosection = () => {
   return (
-    <section className="py-24">
+    <section className="lg:py-16 mt-10">
       <Wrapper>
         <div className="grid lg:grid-cols-2 md:grid-cols-1 items-center">
-          <div>
-            <div className="max-w-md">
+          <div className="max-w-md">
+            <div>
               <div>
                 <Badge className="bg-[#e1edff] text-[#0000ff] px-6 py-2 text-base rounded-md">
                   Sale 70%
                 </Badge>
               </div>
               <div>
-                <h1 className="scroll-m-20 text-4xl py-10 font-extrabold tracking-tight lg:text-5xl">
+                <h1 className="scroll-m-20 md:text-4xl text-xl py-10 font-extrabold tracking-tight lg:text-5xl">
                   An Industrial Take on Streetwear
                 </h1>
                 <p>
@@ -26,7 +26,7 @@ const Herosection = () => {
               </div>
             </div>
             <div className="py-10">
-              <Button className="py-7 px-8 rounded-none">
+              <Button className="md:py-7 md:px-8 rounded-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -44,34 +44,36 @@ const Herosection = () => {
                 Start Shopping
               </Button>
             </div>
-            <div className="flex gap-10">
-              <Image
-                src={"/assets/Featured1.webp"}
-                alt="Bazar"
-                width={300}
-                height={300}
-              />
-              <Image
-                src={"/assets/Featured2.webp"}
-                alt="Bazar"
-                width={300}
-                height={300}
-              />
-              <Image
-                src={"/assets/Featured3.webp"}
-                alt="Bazar"
-                width={300}
-                height={300}
-              />
-              <Image
-                src={"/assets/Featured4.webp"}
-                alt="Bazar"
-                width={300}
-                height={300}
-              />
+            <div className="md:block hidden">
+              <div className="flex gap-10">
+                <Image
+                  src={"/assets/Featured1.webp"}
+                  alt="Bazar"
+                  width={200}
+                  height={200}
+                />
+                <Image
+                  src={"/assets/Featured2.webp"}
+                  alt="Bazar"
+                  width={200}
+                  height={200}
+                />
+                <Image
+                  src={"/assets/Featured3.webp"}
+                  alt="Bazar"
+                  width={200}
+                  height={200}
+                />
+                <Image
+                  src={"/assets/Featured4.webp"}
+                  alt="Bazar"
+                  width={200}
+                  height={200}
+                />
+              </div>
             </div>
           </div>
-          <div className="bg-[#ffece3] h-[35rem] relative w-[35rem] mx-auto rounded-full">
+          <div className="bg-[#ffece3] md:h-[35rem] relative md:w-[35rem] h-[17rem] w-[17rem] mx-auto rounded-full lg:mt-0 md:mt-20 mt-10">
             <div className="absolute -top-10">
               <div className="ml-10">
                 <Image
@@ -79,7 +81,7 @@ const Herosection = () => {
                   width={800}
                   height={800}
                   alt="Girl Image"
-                  className="h-[620px] object-cover"
+                  className="md:h-[620px] h-[320px] object-cover"
                 />
               </div>
             </div>

@@ -21,23 +21,23 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
   let [count, setCount] = useState(0);
 
   return (
-    <section className="mt-10 mb-28">
+    <section className="mt-10 lg:mb-28 mb-10">
       <Wrapper>
-        <div className="grid grid-cols-12 gap-10">
-          <div className="col-span-2">
+        <div className="md:grid grid-cols-12 lg:gap-10 gap-6">
+          <div className="col-span-2 mb-5">
             <Image
               src={image}
               alt={name}
-              className="h-32 w-32 mx-auto border border-gray-300 p-1"
+              className="lg:h-32 lg:w-32 w-20 h-20 mx-auto border border-gray-300 p-1"
             />
           </div>
           <div className="col-span-5">
             <Image src={image} width={800} height={800} alt={name} />
           </div>
           <div className="col-span-5 max-w-80">
-            <div className="text-3xl font-bold">
-              <h1 className="leading-snug">{name}</h1>
-              <h4 className="py-6 text-lg text-gray-500">{category}</h4>
+            <div className="lg:text-3xl font-bold text-xl">
+              <h1 className="leading-snug md:mt-0 mt-6">{name}</h1>
+              <h4 className="py-6 lg:text-lg text-base text-gray-500">{category}</h4>
             </div>
             <div>
               <h2 className="pb-5 font-bold">SELECT SIZE</h2>
@@ -53,7 +53,7 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
               </ul>
             </div>
             <div className="flex gap-8 mt-6 items-center">
-              <p className="text-xl font-bold">Quantity:</p>
+              <p className="lg:text-xl text-lg font-bold">Quantity:</p>
 
               <button
                 onClick={() => (count > 0 ? setCount(--count) : setCount(0))}
@@ -73,7 +73,6 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
                   />
                 </svg>
               </button>
-
               <div>{count}</div>
               <button onClick={() => setCount(++count)}>
                 <svg
@@ -93,7 +92,7 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
               </button>
             </div>
             <div className="flex gap-5 items-center my-6">
-              <Button className="py-5 px-5 rounded-none border-2 border-t-gray-500 border-l-gray-500 border-b-gray-800 border-r-gray-800 ">
+              <Button className="lg:py-5 lg:px-5 rounded-none border-2 border-t-gray-500 border-l-gray-500 border-b-gray-800 border-r-gray-800 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -110,10 +109,10 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
                 </svg>
                 Add to Cart
               </Button>
-              <p className="font-bold text-3xl">${price}</p>
+              <p className="font-bold lg:text-3xl text-xl">${price}</p>
             </div>
             <div>
-              <p>
+              <p className="lg:text-base text-sm">
                 Live the spirit of the brand by wearing the most representative
                 item. This puffer jacket of recycled nylon incorporates the
                 historic Armani Exchange logo - a dip into the past for iconic
@@ -124,15 +123,15 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
         </div>
         <div className="max-w-6xl mx-auto">
           <div className="mt-14">
-            <h4 className="border-b-2 pb-10 text-gray-600 text-3xl font-bold border-gray-300">
+            <h4 className="border-b-2 pb-10 text-gray-600 lg:text-3xl text-xl font-bold border-gray-300">
               Product Information
             </h4>
           </div>
-          <div className="grid grid-cols-4 mt-10 text-justify gap-y-6">
-            <div className="col-span-1 text-lg text-gray-600 font-bold">
+          <div className="md:grid grid-cols-4 mt-10 text-justify gap-5">
+            <div className="col-span-1 lg:text-lg text-base text-gray-600 font-bold md:mb-0 mb-5">
               <h3>PRODUCT DETAILS</h3>
             </div>
-            <div className="col-span-3 text-lg text-gray-500">
+            <div className="col-span-3 lg:text-lg text-sm text-gray-500 md:mb-0 mb-5">
               <p>
                 {" "}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -144,10 +143,10 @@ const ProductDetails: NextPage<ProductDetailsProp> = ({ uniqueVal }) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
-            <div className="col-span-1 text-lg text-gray-600 font-bold">
+            <div className="col-span-1 lg:text-lg text-base text-gray-600 font-bold md:mb-0 mb-5">
               <h3>PRODUCT CARE</h3>
             </div>
-            <div className="col-span-3 text-lg text-gray-500 ml-5">
+            <div className="col-span-3 lg:text-lg text-sm text-gray-500 ml-5">
               <ul className="list-disc">
                 <li>Hand wash using cold water.</li>
                 <li>Do not using bleach.</li>
